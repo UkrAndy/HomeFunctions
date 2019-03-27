@@ -9,5 +9,9 @@ var a = showImage("https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini
 //Задача. Розробити функцію для формування з повної форми ПІБ скорочену
 //Наприклад з "Іванов Володимир Петрович" => "Іванов В. П."
 function getShortName(fullName) {
-    // Записати код тут
+    var name = fullName.split(' ')
+    var name_arr = name[0] + ' ' + name[1][0] + '. ' + name[2][0] + '.' 
+    document.write(`<p> ${name_arr} </p>`)
 }
+
+var b = getShortName(prompt("Введіть ім'я"),'')
