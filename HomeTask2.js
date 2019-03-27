@@ -1,5 +1,18 @@
 //Задача. Дано масив ідентифікаційних кодів користувачів, які заходили на сайт протягом дня.
 // Розробити функцію, яка б з"ясовувала, чи є у даному масиві вказаний ідентифікаційний номер
+function checkUser(userList, userId){
+    for(var i = 0; i < userList.length; i++){
+      if (userId == userList[i]){
+        alert("The user " + userId +" was visit website.");
+      }
+    }
+  }
+  
+  let userIdArray = ["0123", "0124", "0213", "0541", "3421", "4214"];
+  let userId = prompt("Enter unique user id.","0");
+  
+  checkUser(userIdArray, userId);
+
 
 
 //Задача. Розробити функцію, яка серед заданої послідовності символів (у функцію
