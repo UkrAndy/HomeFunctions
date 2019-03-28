@@ -1,13 +1,10 @@
 //Задача. Дано масив ідентифікаційних кодів користувачів, які заходили на сайт протягом дня.
 // Розробити функцію, яка б з"ясовувала, чи є у даному масиві вказаний ідентифікаційний номер
-const IdSearch = (idNum, ...idarr) => {
-    let count = 0
+onst IdSearch = (idNum, ...idarr) => {
     for (let i = 0; i < idarr.length; i++) {
-        if (idNum == idarr[i]) count += 1
+        if (idNum == idarr[i]) return document.write(`Користувач з ідентифікаційним номером ${idNum} сьогодні заходив`)
+        else return document.write(`Користувач з ідентифікаційним номером ${idNum} сьогодні не заходив`)
     }
-    let ne = ''
-    if (count == 0) ne = "НЕ"
-    return `Користувач з ідентифікаційним номером ${idNum} сьогодні ${ne} заходив`
 }
 //Задача. Розробити функцію, яка серед заданої послідовності символів (у функцію
 //можна передати довільну кількість символів) виводить тільки голосні
@@ -16,25 +13,17 @@ const FindVowel = (text) => {
     let golos = ''
     for (let i = 0; i < letter.length; i++) {
         switch (letter[i]) {
-            case 'а': golos += letter[i]
-                break
-            case 'е': golos += letter[i]
-                break
-            case 'є': golos += letter[i]
-                break
-            case 'и': golos += letter[i]
-                break
-            case 'і': golos += letter[i]
-                break
-            case 'ї': golos += letter[i]
-                break
-            case 'о': golos += letter[i]
-                break
-            case 'у': golos += letter[i]
-                break
-            case 'ю': golos += letter[i]
-                break
-            case 'я': golos += letter[i]
+            case 'а':
+            case 'е':
+            case 'є':
+            case 'и':
+            case 'і':
+            case 'ї':
+            case 'о':
+            case 'у':
+            case 'ю':
+            case 'я':
+                golos += letter[i]
                 break
         }
     }
