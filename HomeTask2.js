@@ -25,7 +25,7 @@ function search_vowelv(a) {
         {
             if(a[i] == vowels[j])
             {
-                b = true
+                b = true     <-- Якщо вже відомо, що є, то треба виходити: return
             }
         }
         if(b == true)
@@ -33,7 +33,7 @@ function search_vowelv(a) {
             document.write(`${a[i]} `)
         }
     }
-    document.write(`</p>`)
+    document.write(`</p>`)     
 }
 
 //Задача. Дано масив вакансій. Вивести на екран скільки разів зустрічається кожна вакансія
@@ -46,7 +46,7 @@ function count(a=[]) {
     var n = 1 
     for(var i = 1; i < a.length; i++)
     {
-        if(a[i - 1] == a[i])
+        if(a[i - 1] == a[i])   <-- Ненайкраща ідея порівнювати тільки сусідні елементи
         {
             n++
         }
