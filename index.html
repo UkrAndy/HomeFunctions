@@ -24,6 +24,13 @@
             return x>10
         }
 
+        function f3(result, x, i, arr) {
+            if (x < 0) {
+                result *= x
+            }
+            return result
+        }
+
         var n = parseInt(prompt("Введіть номер завдвння - "),'')
 
         switch(n)
@@ -49,6 +56,11 @@
                 {
                     document.write("Були дні з температурою менше 5 градусів")
                 }
+            break
+            case 3:
+                var a = [17, 2, -3, 4, -5]
+                var c = a.reduce(f3,1)
+                document.write(`Добуток від'ємних елементів масиву - ${c} `)
             break
         }
 
