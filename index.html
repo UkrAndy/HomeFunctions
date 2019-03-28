@@ -7,12 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- Підключити скрипти тут -->
-
+    <script src="./HomeTask1.js"></script>
+    <script src="./HomeTask2.js"></script>
 </head>
 
 <body>
-    ЗАКІНЧИТИ ЗАДАЧІ З ВОРДОВСЬКОГО ДОКУМЕНТУ (який було розміщено раніше)!!!
     <!-- Вивести потрібну розмітку тут -->
+
+    <script>
+    
+        function f1(x, i, arr) {
+            return x<5
+        }
+
+        function f2(x, i, arr) {
+            return x>10
+        }
+
+        function f3(result, x, i, arr) {
+            if (x < 0) {
+                result *= x
+            }
+            return result
+        }
+
+        function f4(result, x, i, arr) {
+           if (x % 2 == 0) {
+               result += x
+           }
+           return result 
+        }
+
+        var n = parseInt(prompt("Введіть номер завдвння - "),'')
+
+        switch(n)
+        {
+            case 1:
+                var a = [10,15,1,4,32] 
+                if(a.some(f1))
+                {
+                    document.write("Були дні з температурою менше 5 градусів")
+                } 
+                else
+                {
+                    document.write("Всі дні з температурою вище 5 градусів")
+                }
+            break
+            case 2:
+                var a = [10,15,1,4,32]
+                if(a.every(f2))
+                {
+                    document.write("Всі дні з температурою вище 10 градусів")
+                }
+                else
+                {
+                    document.write("Були дні з температурою менше 5 градусів")
+                }
+            break
+            case 3:
+                var a = [17, 2, -3, 4, -5]
+                var c = a.reduce(f3,1)
+                document.write(`Добуток від'ємних елементів масиву - ${c}`)
+            break
+            case 4:
+                var a = [17, 2, 3, 4, 5]
+                var c = a.reduce(f4,0)
+                document.write(`Сума парних елементів - ${c}`)
+            break
+        }
+
+    </script>
 
 </body>
 
