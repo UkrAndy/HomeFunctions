@@ -31,6 +31,13 @@
             return result
         }
 
+        function f4(result, x, i, arr) {
+           if (x % 2 == 0) {
+               result += x
+           }
+           return result 
+        }
+
         var n = parseInt(prompt("Введіть номер завдвння - "),'')
 
         switch(n)
@@ -60,10 +67,14 @@
             case 3:
                 var a = [17, 2, -3, 4, -5]
                 var c = a.reduce(f3,1)
-                document.write(`Добуток від'ємних елементів масиву - ${c} `)
+                document.write(`Добуток від'ємних елементів масиву - ${c}`)
+            break
+            case 4:
+                var a = [17, 2, 3, 4, 5]
+                var c = a.reduce(f4,0)
+                document.write(`Сума парних елементів - ${c}`)
             break
         }
-
 
     </script>
 
