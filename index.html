@@ -20,6 +20,10 @@
             return x<5
         }
 
+        function f2(x, i, arr) {
+            return x>10
+        }
+
         var n = parseInt(prompt("Введіть номер завдвння - "),'')
 
         switch(n)
@@ -28,11 +32,22 @@
                 var a = [10,15,1,4,32] 
                 if(a.some(f1))
                 {
-                    document.write("Був день з температурою менше 5 градусів")
+                    document.write("Були дні з температурою менше 5 градусів")
                 } 
                 else
                 {
                     document.write("Всі дні з температурою вище 5 градусів")
+                }
+            break
+            case 2:
+                var a = [10,15,1,4,32]
+                if(a.every(f2))
+                {
+                    document.write("Всі дні з температурою вище 10 градусів")
+                }
+                else
+                {
+                    document.write("Були дні з температурою менше 5 градусів")
                 }
             break
         }
