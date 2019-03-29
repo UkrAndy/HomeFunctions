@@ -46,7 +46,7 @@ function countVacancy(arrVacancy) {
     return;
 }
 
-function countVacancy2(arrVacancy) {  //тут щось не так, але ще не розібрався
+function countVacancy2(arrVacancy) {
 
     function compare(x, i, arr) {
         let count2 = 1;
@@ -55,6 +55,7 @@ function countVacancy2(arrVacancy) {  //тут щось не так, але ще
             if (x == arr[j]) {
                 count2++;
                 arr.splice(j, 1);
+                j--;
             }
         }
 
